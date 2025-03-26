@@ -1,0 +1,22 @@
+{
+  "name": "5c_bianchin_bottelegram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blondones/5C_Bianchin_BotTelegram.git"
+  },
+  "author": "blondones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blondones/5C_Bianchin_BotTelegram/issues"
+  },
+  "homepage": "https://github.com/blondones/5C_Bianchin_BotTelegram#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
