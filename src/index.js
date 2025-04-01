@@ -14,12 +14,13 @@ bot.on("message", async (msg) => {
 
     if (text === "/start") {
         bot.sendMessage(chatId, "Dimmi il modello della macchina.");
-    } else if (!model) {
+    } else {
         model = text;
         bot.sendMessage(chatId, `Modello ricevuto: ${text}. Sto cercando le informazioni...`);
         await getCarInfoByModel(model, chatId);
     }
 });
+
 
 async function getMarcas() {
     const url = `https://parallelum.com.br/fipe/api/v1/carros/marcas`;
@@ -66,6 +67,7 @@ async function getCarInfoByModel(modelo, chatId) {
                         console.log(`Marca trovata: ${marca.nome}, Modello trovato: ${model.nome}`);
                         
                         await getAnos(marca.codigo, model.codigo, chatId);
+                        return;
                     }
                 }
             }
